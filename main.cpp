@@ -8,88 +8,6 @@ using namespace std;
 
 int main()
 {
-
-	/*RandBST<int, int> tree;
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(0, 1);
-	tree.insert(1, 1);
-	tree.insert(2, 1);
-	tree.insert(3, 1);
-	tree.insert(4, 1);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.remove(0);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.remove(2);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(2, 2);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(8, 8);
-	tree.insert(0, 0);
-	tree.insert(7, 7);
-	tree.insert(9, 9);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	BST<KeyType, DataType>::Iterator iter;
-	BST<KeyType, DataType>::ReverseIterator riter;
-
-	
-	cout << (iter == tree.end()) << endl;
-	iter = tree.begin();
-	cout << *iter << endl;
-	cout << (iter == tree.end()) << endl;
-	cout << (iter != tree.end()) << endl;
-
-
-	cout << "\n\n";
-	tree.show_data();
-	cout << "\n\n";
-
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;*/
 	
 	setlocale(LC_ALL, "rus");
 	system("chcp 1251");
@@ -350,6 +268,7 @@ int main()
 			cout << "Exception" << endl;
 		}
 	}
+	
 	return 0;
 
 }
