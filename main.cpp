@@ -1,4 +1,4 @@
-#include "RandBST.cpp"
+ï»¿#include "RandBST.cpp"
 #include <ctime>
 #include <iostream>
 using namespace std;
@@ -8,88 +8,6 @@ using namespace std;
 
 int main()
 {
-
-	/*RandBST<int, int> tree;
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(0, 1);
-	tree.insert(1, 1);
-	tree.insert(2, 1);
-	tree.insert(3, 1);
-	tree.insert(4, 1);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.remove(0);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.remove(2);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(2, 2);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	tree.insert(8, 8);
-	tree.insert(0, 0);
-	tree.insert(7, 7);
-	tree.insert(9, 9);
-
-	tree.show_keyweight();
-	cout << "\nsize: " << tree.getSize() << endl;
-	cout << "isEmpty: " << tree.isEmpty() << endl;
-	cout << "\n\n\n";
-
-	BST<KeyType, DataType>::Iterator iter;
-	BST<KeyType, DataType>::ReverseIterator riter;
-
-	
-	cout << (iter == tree.end()) << endl;
-	iter = tree.begin();
-	cout << *iter << endl;
-	cout << (iter == tree.end()) << endl;
-	cout << (iter != tree.end()) << endl;
-
-
-	cout << "\n\n";
-	tree.show_data();
-	cout << "\n\n";
-
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;
-	++iter;
-	cout << *iter << endl;*/
 	
 	setlocale(LC_ALL, "rus");
 	system("chcp 1251");
@@ -101,34 +19,34 @@ int main()
 
 	bool isExit = false;
 
-	cout << "-1. Âûõîä" << endl;
-	cout << "0. Ïðîñìîòð äåðåâà" << endl;
-	cout << "1. Îïðîñ ðàçìåðà äåðåâà" << endl;
-	cout << "2. Î÷èñòêà äåðåâà" << endl;
-	cout << "3. Ïðîâåðêà äåðåâà íà ïóñòîòó" << endl;
-	cout << "4. Äîñòóï ïî ÷òåíèþ ê äàííûì ïî êëþ÷ó" << endl;
-	cout << "5. Äîñòóï ïî çàïèñè ê äàííûì ïî êëþ÷ó" << endl;
-	cout << "6. Âêëþ÷åíèå äàííûõ ñ çàäàííûì êëþ÷îì" << endl;
-	cout << "7. Óäàëåíèå äàííûõ ñ çàäàííûì êëþ÷îì" << endl;
-	cout << "8. Ôîðìèðîâàíèå ñïèñêà êëþ÷åé â äåðåâå" << endl;
-	cout << "9. (äîï) Îïðåäåëåíèå ïîðÿäêîâîãî íîìåðà äëÿ ýëåìåíòà ñ çàäàííûì êëþ÷îì" << endl;
-	cout << "Ïðÿìîé èòåðàòîð:" << endl;
-	cout << "\t10. Çàïðîñ ïðÿìîãî èòåðàòîðà begin()" << endl;
-	cout << "\t11. Îïåðàöèÿ äîñòóïà ïî ÷òåíèþ ê äàííûì òåêóùåãî óçëà" << endl;
-	cout << "\t12. Îïåðàöèÿ äîñòóïà ïî çàïèñè ê äàííûì òåêóùåãî óçëà" << endl;
-	cout << "\t13. Îïåðàöèÿ èíêðåìåíòà äëÿ ïåðåõîäà ê ñëåäóþùåìó ïî êëþ÷ó óçëó â äåðåâå" << endl;
-	cout << "\t14. Îïåðàöèÿ äåêðåìåíòà äëÿ ïåðåõîäà ê ïðåäûäóùåìó ïî êëþ÷ó óçëó â äåðåâå" << endl;
-	cout << "\t15. Ïðîâåðêà ðàâåíñòâà îäíîòèïíûõ èòåðàòîðîâ (iter è end)" << endl;
-	cout << "\t16. Ïðîâåðêà íåðàâåíñòâà îäíîòèïíûõ èòåðàòîðîâ (iter è begin)" << endl;
-	cout << "Îáðàòíûé èòåðàòîð:" << endl;
-	cout << "\t17. Çàïðîñ îáðàòíîãî èòåðàòîðà rbegin()" << endl;
-	cout << "\t18. Îïåðàöèÿ äîñòóïà ïî ÷òåíèþ ê äàííûì òåêóùåãî óçëà" << endl;
-	cout << "\t19. Îïåðàöèÿ äîñòóïà ïî çàïèñè ê äàííûì òåêóùåãî óçëà" << endl;
-	cout << "\t20. Îïåðàöèÿ èíêðåìåíòà äëÿ ïåðåõîäà ê ïðåäûäóùåìó ïî êëþ÷ó óçëó â äåðåâå" << endl;
-	cout << "\t21. Îïåðàöèÿ äåêðåìåíòà äëÿ ïåðåõîäà ê ñëåäóþùåìó ïî êëþ÷ó óçëó â äåðåâå" << endl;
-	cout << "\t22. Ïðîâåðêà ðàâåíñòâà îäíîòèïíûõ èòåðàòîðîâ (riter è rend)" << endl;
-	cout << "\t23. Ïðîâåðêà íåðàâåíñòâà îäíîòèïíûõ èòåðàòîðîâ (riter è rbegin)" << endl;
-	cout << "24. Îïðîñ ÷èñëà óçëîâ äåðåâà, ïðîñìîòðåííûõ ïðåäûäóùåé îïåðàöèåé\n" << endl;
+	cout << "-1. Ð’Ñ‹Ñ…Ð¾Ð´" << endl;
+	cout << "0. ÐŸÑ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ Ð´ÐµÑ€ÐµÐ²Ð°" << endl;
+	cout << "1. ÐžÐ¿Ñ€Ð¾Ñ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð° Ð´ÐµÑ€ÐµÐ²Ð°" << endl;
+	cout << "2. ÐžÑ‡Ð¸ÑÑ‚ÐºÐ° Ð´ÐµÑ€ÐµÐ²Ð°" << endl;
+	cout << "3. ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð´ÐµÑ€ÐµÐ²Ð° Ð½Ð° Ð¿ÑƒÑÑ‚Ð¾Ñ‚Ñƒ" << endl;
+	cout << "4. Ð”Ð¾ÑÑ‚ÑƒÐ¿ Ð¿Ð¾ Ñ‡Ñ‚ÐµÐ½Ð¸ÑŽ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ" << endl;
+	cout << "5. Ð”Ð¾ÑÑ‚ÑƒÐ¿ Ð¿Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ" << endl;
+	cout << "6. Ð’ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ ÐºÐ»ÑŽÑ‡Ð¾Ð¼" << endl;
+	cout << "7. Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð´Ð°Ð½Ð½Ñ‹Ñ… Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ ÐºÐ»ÑŽÑ‡Ð¾Ð¼" << endl;
+	cout << "8. Ð¤Ð¾Ñ€Ð¼Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ ÑÐ¿Ð¸ÑÐºÐ° ÐºÐ»ÑŽÑ‡ÐµÐ¹ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ" << endl;
+	cout << "9. (Ð´Ð¾Ð¿) ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¿Ð¾Ñ€ÑÐ´ÐºÐ¾Ð²Ð¾Ð³Ð¾ Ð½Ð¾Ð¼ÐµÑ€Ð° Ð´Ð»Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ñ Ð·Ð°Ð´Ð°Ð½Ð½Ñ‹Ð¼ ÐºÐ»ÑŽÑ‡Ð¾Ð¼" << endl;
+	cout << "ÐŸÑ€ÑÐ¼Ð¾Ð¹ Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€:" << endl;
+	cout << "\t10. Ð—Ð°Ð¿Ñ€Ð¾Ñ Ð¿Ñ€ÑÐ¼Ð¾Ð³Ð¾ Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð° begin()" << endl;
+	cout << "\t11. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð° Ð¿Ð¾ Ñ‡Ñ‚ÐµÐ½Ð¸ÑŽ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ñ‚ÐµÐºÑƒÑ‰ÐµÐ³Ð¾ ÑƒÐ·Ð»Ð°" << endl;
+	cout << "\t12. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð° Ð¿Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ñ‚ÐµÐºÑƒÑ‰ÐµÐ³Ð¾ ÑƒÐ·Ð»Ð°" << endl;
+	cout << "\t13. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¸Ð½ÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÑ…Ð¾Ð´Ð° Ðº ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ¼Ñƒ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ ÑƒÐ·Ð»Ñƒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ" << endl;
+	cout << "\t14. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´ÐµÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÑ…Ð¾Ð´Ð° Ðº Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐ¼Ñƒ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ ÑƒÐ·Ð»Ñƒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ" << endl;
+	cout << "\t15. ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ñ€Ð°Ð²ÐµÐ½ÑÑ‚Ð²Ð° Ð¾Ð´Ð½Ð¾Ñ‚Ð¸Ð¿Ð½Ñ‹Ñ… Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð¾Ð² (iter Ð¸ end)" << endl;
+	cout << "\t16. ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½ÐµÑ€Ð°Ð²ÐµÐ½ÑÑ‚Ð²Ð° Ð¾Ð´Ð½Ð¾Ñ‚Ð¸Ð¿Ð½Ñ‹Ñ… Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð¾Ð² (iter Ð¸ begin)" << endl;
+	cout << "ÐžÐ±Ñ€Ð°Ñ‚Ð½Ñ‹Ð¹ Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€:" << endl;
+	cout << "\t17. Ð—Ð°Ð¿Ñ€Ð¾Ñ Ð¾Ð±Ñ€Ð°Ñ‚Ð½Ð¾Ð³Ð¾ Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð° rbegin()" << endl;
+	cout << "\t18. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð° Ð¿Ð¾ Ñ‡Ñ‚ÐµÐ½Ð¸ÑŽ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ñ‚ÐµÐºÑƒÑ‰ÐµÐ³Ð¾ ÑƒÐ·Ð»Ð°" << endl;
+	cout << "\t19. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð° Ð¿Ð¾ Ð·Ð°Ð¿Ð¸ÑÐ¸ Ðº Ð´Ð°Ð½Ð½Ñ‹Ð¼ Ñ‚ÐµÐºÑƒÑ‰ÐµÐ³Ð¾ ÑƒÐ·Ð»Ð°" << endl;
+	cout << "\t20. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð¸Ð½ÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÑ…Ð¾Ð´Ð° Ðº Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐ¼Ñƒ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ ÑƒÐ·Ð»Ñƒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ" << endl;
+	cout << "\t21. ÐžÐ¿ÐµÑ€Ð°Ñ†Ð¸Ñ Ð´ÐµÐºÑ€ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ Ð¿ÐµÑ€ÐµÑ…Ð¾Ð´Ð° Ðº ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ¼Ñƒ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ ÑƒÐ·Ð»Ñƒ Ð² Ð´ÐµÑ€ÐµÐ²Ðµ" << endl;
+	cout << "\t22. ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ñ€Ð°Ð²ÐµÐ½ÑÑ‚Ð²Ð° Ð¾Ð´Ð½Ð¾Ñ‚Ð¸Ð¿Ð½Ñ‹Ñ… Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð¾Ð² (riter Ð¸ rend)" << endl;
+	cout << "\t23. ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½ÐµÑ€Ð°Ð²ÐµÐ½ÑÑ‚Ð²Ð° Ð¾Ð´Ð½Ð¾Ñ‚Ð¸Ð¿Ð½Ñ‹Ñ… Ð¸Ñ‚ÐµÑ€Ð°Ñ‚Ð¾Ñ€Ð¾Ð² (riter Ð¸ rbegin)" << endl;
+	cout << "24. ÐžÐ¿Ñ€Ð¾Ñ Ñ‡Ð¸ÑÐ»Ð° ÑƒÐ·Ð»Ð¾Ð² Ð´ÐµÑ€ÐµÐ²Ð°, Ð¿Ñ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ÐµÐ½Ð½Ñ‹Ñ… Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÐµÐ¹ Ð¾Ð¿ÐµÑ€Ð°Ñ†Ð¸ÐµÐ¹\n" << endl;
 
 	while (!isExit)
 	{
@@ -143,28 +61,28 @@ int main()
 				break;
 			case 0:
 			{
-				cout << "0 - ïðîñìîòð êëþ÷åé(âåñîâ)\n1 - êëþ÷åé\n2 - äàííûõ\n3 - âåñîâ\n4 - ïîðÿäêîâûõ íîìåðîâ\n";
+				cout << "0 - Ð¿Ñ€Ð¾ÑÐ¼Ð¾Ñ‚Ñ€ ÐºÐ»ÑŽÑ‡ÐµÐ¹(Ð²ÐµÑÐ¾Ð²)\n1 - ÐºÐ»ÑŽÑ‡ÐµÐ¹\n2 - Ð´Ð°Ð½Ð½Ñ‹Ñ…\n3 - Ð²ÐµÑÐ¾Ð²\n4 - Ð¿Ð¾Ñ€ÑÐ´ÐºÐ¾Ð²Ñ‹Ñ… Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð²\n";
 				int choice;
 				cin >> choice;
 				switch (choice) {
 				case 0:
-					cout << "Êëþ÷è(âåñà):\n";
+					cout << "ÐšÐ»ÑŽÑ‡Ð¸(Ð²ÐµÑÐ°):\n";
 					tree.show_keyweight();
 					break;
 				case 1:
-					cout << "Êëþ÷è:\n";
+					cout << "ÐšÐ»ÑŽÑ‡Ð¸:\n";
 					tree.show_keys();
 					break;
 				case 2:
-					cout << "Äàííûå:\n";
+					cout << "Ð”Ð°Ð½Ð½Ñ‹Ðµ:\n";
 					tree.show_data();
 					break;
 				case 3:
-					cout << "Âåñà:\n";
+					cout << "Ð’ÐµÑÐ°:\n";
 					tree.show_weight();
 					break;
 				case 4:
-					cout << "Ïîðÿäêîâûå íîìåðà:\n";
+					cout << "ÐŸÐ¾Ñ€ÑÐ´ÐºÐ¾Ð²Ñ‹Ðµ Ð½Ð¾Ð¼ÐµÑ€Ð°:\n";
 					tree.show_numbers();
 					break;
 				}
@@ -189,8 +107,8 @@ int main()
 			case 4:
 			{
 				KeyType key;
-				cout << "×òåíèå ïî êëþ÷ó" << endl;
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð§Ñ‚ÐµÐ½Ð¸Ðµ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ" << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				cin >> key;
 
 				try {
@@ -203,10 +121,10 @@ int main()
 			{
 				KeyType key;
 				DataType data;
-				cout << "Çàïèñü ïî êëþ÷ó" << endl;
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð—Ð°Ð¿Ð¸ÑÑŒ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ" << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				cin >> key;
-				cout << "Ââåäèòå äàííûå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: ";
 				cin >> data;
 				//cout << tree.write(key, data) << endl;
 				try {
@@ -219,9 +137,9 @@ int main()
 			{
 				KeyType key;
 				DataType data;
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				cin >> key;
-				cout << "Ââåäèòå äàííûå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: ";
 				cin >> data;
 				cout << tree.insert(key, data) << endl;
 				break;
@@ -229,8 +147,8 @@ int main()
 			case 7:
 			{
 				KeyType key;
-				cout << "Óäàëåíèå ïî êëþ÷ó" << endl;
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ Ð¿Ð¾ ÐºÐ»ÑŽÑ‡Ñƒ" << endl;
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				cin >> key;
 				cout << tree.remove(key) << endl;
 				break;
@@ -244,7 +162,7 @@ int main()
 			case 9:
 			{
 				KeyType key;
-				cout << "Ââåäèòå êëþ÷: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ»ÑŽÑ‡: ";
 				cin >> key;
 				cout << tree.getSerialNumber(key) << endl;
 				break;
@@ -263,7 +181,7 @@ int main()
 			case 12:
 			{
 				DataType data;
-				cout << "Ââåäèòå äàííûå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: ";
 				cin >> data;
 				try { *iter = data; }
 				catch (...) { cout << "Exception" << endl; }
@@ -305,7 +223,7 @@ int main()
 			case 19:
 			{
 				DataType data;
-				cout << "Ââåäèòå äàííûå: ";
+				cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ: ";
 				cin >> data;
 				try { *riter = data; }
 				catch (...) { cout << "Exception" << endl; }
@@ -340,7 +258,7 @@ int main()
 			}
 			default:
 			{
-				cout << "Ââåäåíî íåâåðíîå çíà÷åíèå!" << endl;
+				cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ!" << endl;
 				break;
 			}
 			}
@@ -350,6 +268,7 @@ int main()
 			cout << "Exception" << endl;
 		}
 	}
+	
 	return 0;
 
 }
