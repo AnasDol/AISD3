@@ -154,11 +154,13 @@ typename BST<KeyType, DataType>::Node* RandBST<KeyType, DataType>::join(typename
 
     if (rand() % (a->weight + b->weight + 1) == 0) {
         a->right = join(a->right, b);
+        fixWeight(a);
         return a;
     }
 
     else {
         b->left = join(a, b->left);
+        fixWeight(b);
         return b;
     }
 
