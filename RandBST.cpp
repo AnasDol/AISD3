@@ -139,10 +139,11 @@ typename BST<KeyType, DataType>::Node* RandBST<KeyType, DataType>::insertRoot(Ke
 template<typename KeyType, typename DataType>
 void RandBST<KeyType, DataType>::fixWeight(typename RandBST<KeyType, DataType>::Node* node) // установление корректного размера дерева
 {
-    if (node->left != nullptr && node->right != nullptr) node->weight = node->left->weight + node->right->weight + 1;
-    else if (node->left != nullptr && node->right == nullptr) node->weight = node->left->weight + 1;
-    else if (node->left == nullptr && node->right != nullptr) node->weight = node->right->weight + 1;
-    else node->weight = 1;
+    if (node == nullptr) return;
+    int w1 = 0, w2 = 0;
+    if (node->right != nullptr) w1 = node->right->weight;
+    if (node->left != nullptr) w2 = node->left->weight;
+    node->weight = w1 + w2 + 1;
 }
 
 template<typename KeyType, typename DataType>
