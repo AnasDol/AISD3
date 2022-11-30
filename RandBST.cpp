@@ -1,4 +1,5 @@
 ﻿#include "BST.cpp"
+#include <limits.h>
 
 template <typename KeyType, typename DataType> 
 class RandBST : public BST<KeyType, DataType>
@@ -44,7 +45,7 @@ typename BST<KeyType, DataType>::Node* RandBST<KeyType, DataType>::insert_recurs
     }
 
     
-    if (rand() % (node->weight + 1) == 0) {
+    if (rand() < RAND_MAX / (node->weight + 1)) {
         return insertRoot(key, data, node, is_ok); // с некоторой вероятностью вставка в корень поддерева
     }
 
@@ -153,7 +154,7 @@ typename BST<KeyType, DataType>::Node* RandBST<KeyType, DataType>::join(typename
     if (a == nullptr) return b;
     if (b == nullptr) return a;
 
-    if (rand() % (a->weight + b->weight + 1) == 0) {
+    if (rand() / (RAND_MAX / (a->weight + b->weight + 1)) < a->weight) {
         a->right = join(a->right, b);
         fixWeight(a);
         return a;
